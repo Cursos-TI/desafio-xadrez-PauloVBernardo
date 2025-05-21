@@ -1,42 +1,63 @@
 #include <stdio.h>
 
 // Desafio de Xadrez - MateCheck
-// Nível Novato - Paulo Vitor dos Santos Bernardo
+// Nível aventureiro - Paulo Vitor dos Santos Bernardo
+
+
+#include <stdio.h>
 
 int main() {
-
-    //Movimentação do Bispo em cinco casas na diagonal (cima e direita) usando a função while
+    //Bispo 5 casas cima e direita usando a função while
+    printf("Movimentação do bispo\n");
     int bispo = 0;
 
-    while (bispo < 5) //condição especifica que se execute o código até que o valor da variável bispo seja 4
+    while (bispo < 5) 
     {
-        printf("%d Cima-Direita\n", bispo + 1); //imprime na tela a direção e o número da movimentação
+        printf("%d para Cima-Direita\n", bispo + 1); //imprime na tela a direção e o número da movimentação
         bispo++;
 
     }
 
     printf("\n");
+
+    printf("Movimentação da rainha\n");
     
 
-    //Movimentação da Rainha em oito casas para esquerda usando a função do-while
+    //Rainda 8 casas para esquerda
 
     int rainha = 0;
 
     do 
     {
-        printf("%d Direita\n", rainha + 1); //imprime na tela a direção e o número da movimentação
+        printf("%d para a Direita\n", rainha + 1); //Imprime na tela a direção e o número da movimentação
         rainha++;
 
-    } while (rainha <8); //condição é de parar de executar o código quando o valor da variável rainha for 7
+    } while (rainha <8);
     
     printf("\n");
 
-    //Movimentação da Torre em cinco casas para a direita usando a função for
+    printf("Movimentação da torre\n");
 
-    for (int torre = 0; torre < 5; torre++) //condição especifica que se execute o código pelo número de vezes em que o valor da variável torre somada a uma unidade for menor que cinco
+    //Mover a Torre 5 casas para a direita
+    for (int torre = 0; torre < 5; torre++) 
     {
-        printf("%d Direita\n", torre + 1); //Imprime a direção do movimento
+        printf("%d para a Direita\n", torre + 1); //Imprime a direção do movimento
     }
+
+    printf("\n");
+    printf("Movimentação do cavalo\n");
+
+//Move o cavalo duas casas para baixo e uma para a esquerda
+
+
+    for (int i = 0; i <=2; i++) { //Primeiro for estabele a condição de se o valor de i for menor ou igual a 2, o código deverá ser executado
+        while (i <=1) { //Segundo loop com while estabelece que se o valor de i for menor ou igual a 1, então o código deverá ser executado
+            i++;
+            printf("%d para Baixo\n", i); //Aqui ocorrerá a impressão segundo as condições do primeiro loop for com o número da casa que está andando
+        }
+        printf("%d para a Esquerda\n", i-1); //Aqui ocorre a impressão segundo as condições do segundo loop while com o número da casa que está andando
+
+        }
 
 
     return 0;
